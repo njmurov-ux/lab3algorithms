@@ -104,5 +104,5 @@ dijkstra <- function(graph, init) {
   # Return distances as numeric vector named by node values (sorted ascending)
   # Keep numeric values (Inf for unreachable)
   # Names will be character representations of the node values
-  return(dist)
+  return(unname(dist))
 }
