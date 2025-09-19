@@ -5,7 +5,9 @@
 [![R-CMD-check](https://github.com/njmurov-ux/lab3algorithms/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/njmurov-ux/lab3algorithms/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of lab3algorithms is to ...
+This package includes two functions: euclidean and dijkstra.
+The euclidean function computes the greatest common divisor (GCD) of two integers using the Euclidean division method.
+The dijkstra function determines the shortest distances from a specified starting node to all other nodes in a given DataFrame.
 
 ## Installation
 
