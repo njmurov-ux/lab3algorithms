@@ -18,3 +18,28 @@ test_that("Error messages are returned for erronous input in the Dijkstra algori
   expect_error(dijkstra(wiki_graph, 7))
   expect_error(dijkstra(as.matrix(wiki_graph), 3))
 })
+
+neg_weight_graph <- data.frame(v1 = 1, v2 = 2, w = -1)
+
+test_that("Negative edge weights should raise error", {
+  expect_error(dijkstra(neg_weight_graph, 1))
+})
+
+too_few_cols <- data.frame(v1=1, v2=2)
+too_many_cols <- data.frame(v1=1, v2=2, w=3, extra=4)
+
+test_that("graph has too few or too many columns", {
+  expect_error(dijkstra(too_few_cols, 1), "graph must have exactly three columns")
+  expect_error(dijkstra(too_many_cols, 1), "graph must have exactly three columns")
+})
+
+inf_graph <- data.frame(v1=c(1), v2=c(2), w=c(Inf))
+
+test_that("graph contains Inf", {
+  expect_error(dijkstra(inf_graph, 1), "graph contains non-finite values")
+})
+
+test_that("init is not numeric", {
+  expect_error(dijkstra(wiki_graph, "a"), "init must be a finite numeric scalar")
+})
+
