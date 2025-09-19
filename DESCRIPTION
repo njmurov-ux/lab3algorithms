@@ -7,6 +7,11 @@ Authors@R: c(
       "Sergey", "Volchkov",
       email = "servo519@student.liu.se",
       role = c("aut", "cre")
+    ),
+    person(
+      "Md Shahin", "patowary",
+      email = "mdpa888@student.liu.se",
+      role = c("aut", "ctb")
     ))
 Description: Functions for calculating Euclidean and Dijkstra algorithms.
 License: MIT + file LICENSE
