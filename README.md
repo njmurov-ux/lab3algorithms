@@ -25,8 +25,8 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(lab3algorithms)
 # Euclidean
-#' euclidean(123612, 13892347912)
-#' euclidean(100, 1000)
+euclidean(123612, 13892347912)
+euclidean(100, 1000)
 
 # Dijkstra
 wiki_graph <-
