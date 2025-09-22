@@ -14,38 +14,6 @@
 #' euclidean(123612, 13892347912)
 #' euclidean(100, 1000)
 
-# euclidean <- function(a, b) {
-#   # Helper to validate each argument is a finite numeric scalar and integer-valued
-#   validate_scalar_integer <- function(x, name) {
-#     if (!(is.numeric(x) && length(x) == 1 && !is.na(x) && is.finite(x))) {
-#       stop(sprintf("'%s' must be a finite numeric scalar.", name), call. = FALSE)
-#     }
-#     tol <- .Machine$double.eps^0.5
-#     if (abs(x - round(x)) > tol) {
-#       stop(sprintf("'%s' must be integer-valued (no fractional part).", name), call. = FALSE)
-#     }
-#   }
-#
-#   validate_scalar_integer(a, "a")
-#   validate_scalar_integer(b, "b")
-#
-#   # Work with absolute integer values
-#   A <- as.integer(abs(round(a)))
-#   B <- as.integer(abs(round(b)))
-#
-#   # Handle gcd(0,0) as 0
-#   if (A == 0L && B == 0L) return(as.integer(0L))
-#
-#   # Euclidean algorithm
-#   while (B != 0L) {
-#     r <- A %% B
-#     A <- B
-#     B <- r
-#   }
-#
-#   return(A)
-# }
-
 euclidean <- function(a, b) {
   # Validate numeric scalar and integer-valued (within floating tolerance)
   validate_scalar_integer <- function(x, name) {
